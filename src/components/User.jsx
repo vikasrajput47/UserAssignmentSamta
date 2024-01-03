@@ -19,7 +19,7 @@ const User = () => {
         };
         fetchData();
         console.log(data);
-    }, [])
+    })
     const handleSort = () => {
       const temp=[...data].sort((a,b)=>a.name.localeCompare(b.name))
         setData(temp);
@@ -29,7 +29,7 @@ const User = () => {
         if (pastData) {
             setSearched(JSON.parse(pastData));
         }
-    }, [])
+    })
     const updatePastData = (term) => {
         const currentSearch = [...searched, term];
         setSearched(currentSearch);
